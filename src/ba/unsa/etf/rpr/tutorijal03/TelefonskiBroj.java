@@ -1,7 +1,7 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
 public abstract class TelefonskiBroj {
-    int broj;
+    String broj;
 
     public abstract String ispisi();
     public abstract int hashCode();
