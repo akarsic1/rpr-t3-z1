@@ -22,9 +22,9 @@ public class Imenik {
     }
 
     public String naSlovo(char s){
-        int i = 1;
+        int i = 0;
          for(Map.Entry<String, TelefonskiBroj> entry : mapa.entrySet()){
-            if(entry.getKey().charAt(0) == s) return  i+" "+entry.getKey()+" - "+entry.getValue();
+            if(entry.getKey().charAt(0) == s) return  i+". "+entry.getKey()+" - "+entry.getValue().ispisi();
             i++;
         }
         return "";

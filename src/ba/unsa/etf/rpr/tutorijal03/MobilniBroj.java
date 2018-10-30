@@ -1,6 +1,10 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
 public class MobilniBroj extends TelefonskiBroj{
+    public int getMobilnaMreza() {
+        return mobilnaMreza;
+    }
+
     int mobilnaMreza;
     String broj;
 
@@ -9,15 +13,17 @@ public class MobilniBroj extends TelefonskiBroj{
         broj = br;
     }
 
+
+
     @Override
     public int hashCode(){
-       return mobilnaMreza;
+       return 0;
     }
 
     @Override
     public String ispisi(){
         String vraceni = "";
-        vraceni = 0 + mobilnaMreza + "/" + broj;
+        vraceni = "0" + mobilnaMreza + "/" + broj;
         return vraceni;
     }
 }

@@ -15,21 +15,9 @@ public class FiksniBroj extends TelefonskiBroj{
     }
 
 
-
     @Override
     public int hashCode(){
-        int pozivni = 0;
-        if(grad == Grad.SARAJEVO)pozivni = 33;
-        else if(grad == Grad.TUZLA)pozivni = 35;
-        else if(grad == Grad.TRAVNIK)pozivni = 30;
-        else if(grad == Grad.ORAŠJE)pozivni = 31;
-        else if(grad == Grad.ZENICA)pozivni = 32;
-        else if(grad == Grad.LIVNO)pozivni = 34;
-        else if(grad == Grad.MOSTAR)pozivni = 36;
-        else if(grad == Grad.BIHAĆ)pozivni = 37;
-        else if(grad == Grad.GORAŽDE)pozivni = 38;
-        else pozivni = 39;
-        return pozivni;
+        return 0;
     }
 
     public FiksniBroj(Grad gr, String br){
@@ -45,11 +33,26 @@ public class FiksniBroj extends TelefonskiBroj{
         return za_ispis;
     }*/
 
+    public int pozivniZaGrad(Grad grad){
+        int pozivni = 0;
+        if(grad == Grad.SARAJEVO)pozivni = 33;
+        else if(grad == Grad.TUZLA)pozivni = 35;
+        else if(grad == Grad.TRAVNIK)pozivni = 30;
+        else if(grad == Grad.ORAŠJE)pozivni = 31;
+        else if(grad == Grad.ZENICA)pozivni = 32;
+        else if(grad == Grad.LIVNO)pozivni = 34;
+        else if(grad == Grad.MOSTAR)pozivni = 36;
+        else if(grad == Grad.BIHAĆ)pozivni = 37;
+        else if(grad == Grad.GORAŽDE)pozivni = 38;
+        else pozivni = 39;
+        return pozivni;
+    }
+
     @Override
     public String ispisi(){
         String za_ispis = "";
-        int pozivni = this.grad.hashCode();
-        za_ispis = 0+pozivni+"/"+this.broj;
+        int pozivni =pozivniZaGrad(this.grad);
+        za_ispis = "0"+pozivni+"/"+this.broj;
         return za_ispis;
     }
 
