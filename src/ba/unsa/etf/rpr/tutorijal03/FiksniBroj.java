@@ -10,6 +10,11 @@ public class FiksniBroj extends TelefonskiBroj{
     String broj;
     Grad grad;
 
+    public Grad getGrad() {
+        return grad;
+    }
+
+
 
     @Override
     public int hashCode(){
@@ -47,4 +52,6 @@ public class FiksniBroj extends TelefonskiBroj{
         za_ispis = 0+pozivni+"/"+this.broj;
         return za_ispis;
     }
+
+
 }
