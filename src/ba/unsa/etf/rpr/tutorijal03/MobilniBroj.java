@@ -1,12 +1,13 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
 public class MobilniBroj extends TelefonskiBroj{
+    int mobilnaMreza;
+    String broj;
+
     public int getMobilnaMreza() {
         return mobilnaMreza;
     }
 
-    int mobilnaMreza;
-    String broj;
 
     public MobilniBroj(int mm, String br){
         mobilnaMreza = mm;

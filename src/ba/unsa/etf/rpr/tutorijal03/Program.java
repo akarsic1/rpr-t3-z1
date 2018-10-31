@@ -14,6 +14,7 @@ public class Program {
         imenik.dodaj("Jozo Jozic", new MobilniBroj(64, "987-654"));
         imenik.dodaj("John Smith", new MedunarodniBroj("+1", "23 45-67-89"));
         int unos = -1;
+
         while(unos != 0){
             System.out.println("Izaberi jedan od ponuđwnih brojeva: ");
             System.out.println("0. Izlaz");
@@ -22,7 +23,8 @@ public class Program {
             System.out.println("3. Daj mi brojeve čije ime vlasnika počinje unesenim slovom");
             System.out.println("4. Daj mi brojve i ljude iz grada");
             Scanner ulaz = new Scanner(System.in);
-            int unos = ulaz.nextInt();
+            Integer unos = ulaz.nextInt();
+
             if(unos == 1) {
                 System.out.println("Unesite ime čovjeka: ");
                 String uneseni = ulaz.next();
@@ -30,9 +32,21 @@ public class Program {
             }
             else if(unos == 2) {
                 System.out.println("Unesite broj: ");
-                TelefonskiBroj uneseni = ulaz.next();
+                String uneseni = ulaz.next();
+                System.out.println("Koje je vrste broj?");
+                System.out.println("1.Fiksni?");
+                System.out.println("2.Mobilni");
+                System.out.println("3. Medjunarodni");
+                int vrsta = ulaz.nextInt();
+                if(vrsta == 1){
+                    System.out.println("Unesite grad: ");
+                    FiksniBroj.Grad g = ulaz.next();
+                    System.out.println("Traženi čovjek je: ",+imenik.dajIme(new FiksniBroj()));
+                }
             }
+            else if(unos == 3) {
 
+            }
         }
     }
 }
