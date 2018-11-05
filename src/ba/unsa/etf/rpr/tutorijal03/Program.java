@@ -6,7 +6,7 @@ import static ba.unsa.etf.rpr.tutorijal03.FiksniBroj.Grad.SARAJEVO;
 
 public class Program {
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Imenik imenik = new Imenik();
         imenik.dodaj("Sara Sarac", new FiksniBroj(SARAJEVO, "123-156"));
         imenik.dodaj("Pero Peric", new FiksniBroj(SARAJEVO, "123-656"));
@@ -48,5 +48,5 @@ public class Program {
 
             }
         }
-    }
+    }*/
 }
